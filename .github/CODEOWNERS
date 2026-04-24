@@ -6,9 +6,10 @@
 # Если меняется бэкенд — GitHub позовет бэкендера
 /backend/      @ShalunBdk
 
-# Если дизайнер обновляет иконки или макеты
+# Если меняется UX/UX (иконки, макеты) - — GitHub позовет дизайнера
 /design/       @Jackson-695
 
 # Product Manager - ревьюер для изменений в концепции проекта
 /README.md     @MaratDanilyuk
 /docs/         @MaratDanilyuk
+/.github/      @MaratDanilyuk
