@@ -39,7 +39,7 @@ git push origin ИМЯ_ТВОЕЙ_ВЕТКИ
 ### 5. Ревью (Проверка)
 Если ты ревьюер:
 * Перейди в **Files changed**.
-* Если всё ок — **Submit review**  -> **Approve**.
+* Если всё ок — **Submit review**  -> **Approve** -> **Squash and merge**.
 
 ### 6. Финал
 После апрува GitHub сам:
