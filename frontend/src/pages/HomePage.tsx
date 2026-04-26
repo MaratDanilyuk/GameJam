@@ -1,49 +1,37 @@
+import { Settings } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 import "./HomePage.css";
-import bgImage from "../assets/home.png";
 import Person from "../components/Person";
+import bgImage from "../assets/log_in.jpg";
 
 export default function HomePage() {
-  const handleStart = () => {
-    console.log("Начать игру");
-  };
-
+  const navigate = useNavigate();
   return (
-    <main
-      className="home-page"
-      style={{ backgroundImage: `url(${bgImage})` }}
-    >
-      <div className="home-page__overlay" />
+    <main className="home-page" style={{ backgroundImage: `url(${bgImage})` }}>
+      <button className="home-page__settings" type="button" aria-label="Настройки">
+        <Settings size={42} strokeWidth={3.5} />
+      </button>
 
-      <section className="home-hero">
-        <div className="home-hero__content">
-          <p className="home-hero__subtitle">
-            Фиджитал-игра для детей 6–11 лет
-          </p>
-
-          <h1 className="home-hero__title">
-            Хранитель
-            <br />
-            потерянных
-            <br />
-            историй
-          </h1>
-
-          <p className="home-hero__description">
-            Лоскутная реальность разрушена. Помоги Хранителю восстановить мир —
-            выполняй задания в реальной жизни и возвращай утраченное.
-          </p>
-
-          <button className="home-hero__button" onClick={handleStart}>
-            Начать
-          </button>
-
-          <div className="home-hero__note">
-            Каждое твоё действие в реальном мире делает этот мир целее.
-          </div>
+      <section className="home-login">
+        <div className="home-login__person">
+          <Person />
         </div>
 
-        <div className="home-hero__visual">
-          <Person />
+        <div className="home-login__panel">
+          <div className="home-login__title">
+            Хранитель потерянных историй
+          </div>
+
+          <button 
+            onClick={() => navigate("/menu")}
+            className="home-login__button" type="button"
+          >
+            Войти
+          </button>
+
+          <button className="home-login__button" type="button">
+            Родительский вход
+          </button>
         </div>
       </section>
     </main>
