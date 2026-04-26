@@ -1,0 +1,13 @@
+fastapi
+uvicorn[standard]
+sqlalchemy
+alembic
+asyncpg
+PyJWT
+bcrypt
+python-multipart
+python-dotenv
+pydantic[email]
+pydantic-settings
+aiofiles
+pillow
