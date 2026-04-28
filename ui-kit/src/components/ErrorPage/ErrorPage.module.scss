@@ -1,0 +1,17 @@
+@use '@/styles/tokens' as *;
+
+.page {
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  text-align: center; padding: 64px 24px; font-family: $f-body;
+  gap: 16px; min-height: 480px;
+}
+
+.code {
+  font-family: $f-display; font-weight: 900; font-size: 120px; line-height: 1;
+  background: linear-gradient(135deg, $c-primary, $c-danger-press);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+  margin: 0;
+}
+.title { font-family: $f-display; font-size: 32px; font-weight: 700; color: $c-text-strong; margin: 0; }
+.body { color: $c-text-muted; max-width: 420px; line-height: 1.5; margin: 0; }
+.actions { display: flex; gap: 12px; margin-top: 8px; }

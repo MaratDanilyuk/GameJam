@@ -1,0 +1,43 @@
+@use '@/styles/tokens' as *;
+
+.avatar {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-family: $f-body;
+  font-weight: 700;
+  color: $c-on;
+  overflow: hidden;
+  flex: none;
+}
+
+.size-32 { width: 32px; height: 32px; font-size: 13px; }
+.size-40 { width: 40px; height: 40px; font-size: 15px; }
+.size-48 { width: 48px; height: 48px; font-size: 17px; }
+.size-64 { width: 64px; height: 64px; font-size: 22px; }
+.size-80 { width: 80px; height: 80px; font-size: 28px; }
+
+.img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+.dot {
+  position: absolute;
+  bottom: 4%;
+  right: 4%;
+  width: 28%;
+  height: 28%;
+  min-width: 8px;
+  min-height: 8px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px $c-on;
+
+  &.online  { background: $c-success; }
+  &.offline { background: $c-text-muted; }
+  &.busy    { background: $c-danger; }
+}
+
+.group { display: inline-flex; }
+.group .avatar { box-shadow: 0 0 0 3px $c-on; }
+.group .avatar + .avatar { margin-left: -10px; }
+.group .more { background: $c-purple-300; color: $c-primary-deep; }

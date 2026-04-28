@@ -1,0 +1,54 @@
+@use '@/styles/tokens' as *;
+
+.root {
+  display: inline-flex;
+  align-items: center;
+  gap: $sp-3;
+  font-family: $f-body;
+  cursor: pointer;
+  user-select: none;
+  &.disabled { opacity: 0.4; cursor: not-allowed; }
+}
+
+.box {
+  width: 24px;
+  height: 24px;
+  border-radius: 8px;
+  border: 2px solid $c-purple-700;
+  background: $c-on;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  color: $c-on;
+  transition: background 0.15s, border-color 0.15s, box-shadow 0.15s;
+
+  svg { opacity: 0; transform: scale(0.6); transition: opacity 0.12s, transform 0.12s; }
+}
+
+.root:hover .box { border-color: $c-primary-soft; background: $c-purple-200; }
+
+.input { position: absolute; opacity: 0; pointer-events: none; }
+
+.input:focus-visible + .box { box-shadow: $sh-focus; }
+
+.input:checked + .box,
+.checked .box {
+  background: $c-primary;
+  border-color: $c-primary;
+  svg { opacity: 1; transform: scale(1); }
+}
+
+.partly .box {
+  background: $c-primary;
+  border-color: $c-primary;
+  svg { opacity: 1; transform: scale(1); }
+}
+
+.error .box { border-color: $c-danger; background: rgba(255, 75, 92, 0.08); }
+
+.label {
+  font-size: 16px;
+  line-height: 22px;
+  color: $c-text-strong;
+}

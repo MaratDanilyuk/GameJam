@@ -1,0 +1,20 @@
+@use '@/styles/tokens' as *;
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  background: $c-purple-200;
+  color: $c-primary-soft;
+  font-family: $f-body;
+  font-weight: 700;
+  transition: background 0.15s, color 0.15s, transform 0.08s;
+  &:hover { background: $c-purple-300; color: $c-primary; }
+  &:active { transform: scale(0.94); }
+  &:focus-visible { outline: none; box-shadow: $sh-focus; }
+}

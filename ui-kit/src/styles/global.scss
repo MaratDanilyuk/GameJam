@@ -1,0 +1,18 @@
+@use './fonts';
+@use './tokens' as *;
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html, body, #root, #storybook-root {
+  margin: 0;
+  padding: 0;
+  font-family: $f-body;
+  color: $c-text;
+  background: $c-bg;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+button { font: inherit; color: inherit; cursor: pointer; }
+input, textarea { font: inherit; color: inherit; }
+a { color: inherit; }

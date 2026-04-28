@@ -1,0 +1,14 @@
+@use '@/styles/tokens' as *;
+
+.skel {
+  display: block;
+  background: linear-gradient(90deg, $c-surface-2 0%, $c-purple-200 50%, $c-surface-2 100%);
+  background-size: 200% 100%;
+  animation: sk-shim 1.4s linear infinite;
+  border-radius: 8px;
+}
+.circle { border-radius: 50%; }
+.text   { height: 14px; border-radius: 6px; }
+.title  { height: 22px; border-radius: 6px; }
+
+@keyframes sk-shim { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }

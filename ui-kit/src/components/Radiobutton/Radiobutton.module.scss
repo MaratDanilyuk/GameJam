@@ -1,0 +1,49 @@
+@use '@/styles/tokens' as *;
+
+.root {
+  display: inline-flex;
+  align-items: center;
+  gap: $sp-3;
+  cursor: pointer;
+  user-select: none;
+  &.disabled { opacity: 0.4; cursor: not-allowed; }
+}
+
+.input { position: absolute; opacity: 0; pointer-events: none; }
+
+.dot {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid $c-purple-700;
+  background: $c-on;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  transition: border-color 0.15s, background 0.15s, box-shadow 0.15s;
+
+  &::after {
+    content: '';
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: $c-on;
+    transform: scale(0);
+    transition: transform 0.15s;
+  }
+}
+
+.root:hover .dot { border-color: $c-primary-soft; }
+
+.input:focus-visible + .dot { box-shadow: $sh-focus; }
+
+.input:checked + .dot {
+  background: $c-primary;
+  border-color: $c-primary;
+  &::after { transform: scale(1); }
+}
+
+.error .dot { border-color: $c-danger; }
+
+.label { font-size: 16px; line-height: 22px; color: $c-text-strong; }

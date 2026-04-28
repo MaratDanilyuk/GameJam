@@ -1,0 +1,13 @@
+@use '@/styles/tokens' as *;
+
+.btn {
+  display: inline-flex; align-items: center; gap: 6px;
+  border: none; background: transparent; cursor: pointer;
+  font-family: $f-body; font-weight: 700; font-size: 15px;
+  color: $c-primary; padding: 4px 0; border-bottom: 2px solid transparent;
+  transition: color 0.15s, border-color 0.15s;
+  &:hover { color: $c-primary-press; border-bottom-color: currentColor; }
+  &:focus-visible { outline: none; box-shadow: $sh-focus; border-radius: 4px; }
+}
+.muted { color: $c-text-muted; &:hover { color: $c-text-strong; } }
+.danger { color: $c-danger-press; &:hover { color: $c-danger-deep; } }

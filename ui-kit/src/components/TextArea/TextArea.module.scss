@@ -1,0 +1,30 @@
+@use '@/styles/tokens' as *;
+
+.field { display: grid; gap: 6px; font-family: $f-body; width: 100%; }
+.label { font-size: 14px; font-weight: 600; color: $c-text-strong; }
+
+.wrap {
+  display: block;
+  background: #fff;
+  border: 2px solid $c-line;
+  border-radius: $r-md;
+  padding: 12px 14px;
+  transition: border-color 0.15s, box-shadow 0.15s;
+  &:hover { border-color: $c-purple-600; }
+  &:focus-within { border-color: $c-primary; box-shadow: $sh-focus; }
+}
+
+.area {
+  width: 100%; min-height: 80px; resize: vertical;
+  border: none; outline: none; background: transparent;
+  font: inherit; color: $c-text-strong; line-height: 22px;
+  &::placeholder { color: $c-text-muted; }
+}
+
+.foot {
+  display: flex; justify-content: space-between; align-items: center;
+  font-size: 13px; color: $c-text-muted; margin-top: 6px;
+}
+
+.error .wrap { border-color: $c-danger; }
+.error .foot { color: $c-danger; }

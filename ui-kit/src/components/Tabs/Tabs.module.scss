@@ -1,0 +1,53 @@
+@use '@/styles/tokens' as *;
+
+.tabs {
+  display: inline-flex;
+  position: relative;
+  font-family: $f-body;
+}
+
+.list {
+  display: inline-flex;
+  background: $c-surface-2;
+  border-radius: 999px;
+  padding: 4px;
+  gap: 2px;
+}
+
+.tab {
+  position: relative;
+  padding: 8px 18px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  border: none;
+  background: transparent;
+  color: $c-text-muted;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  transition: color 0.15s, background 0.15s;
+  white-space: nowrap;
+  &:hover { color: $c-text-strong; }
+  &.active { background: $c-on; color: $c-text-strong; box-shadow: $sh-1; }
+  &:focus-visible { outline: none; box-shadow: $sh-focus; }
+}
+
+.underline .list { background: transparent; padding: 0; gap: 24px; border-bottom: 1px solid $c-line; }
+.underline .tab {
+  border-radius: 0;
+  height: 44px;
+  padding: 0 4px;
+  &.active { background: transparent; color: $c-primary; box-shadow: none; border-bottom: 2px solid $c-primary; }
+}
+
+.count {
+  margin-left: 8px;
+  background: $c-purple-300;
+  color: $c-primary-deep;
+  font-size: 12px;
+  padding: 1px 8px;
+  border-radius: 999px;
+}
+.tab.active .count { background: $c-primary; color: $c-on; }

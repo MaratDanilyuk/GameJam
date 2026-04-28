@@ -1,0 +1,9 @@
+@use '@/styles/tokens' as *;
+.foot {
+  background: $c-text-strong; color: rgba(255,255,255,0.7);
+  padding: 32px 24px; font-family: $f-body; font-size: 14px;
+  display: grid; grid-template-columns: 1fr auto auto; gap: 32px; align-items: center;
+}
+.brand { color: #fff; font-family: $f-display; font-weight: 900; font-size: 20px; }
+.links { display: flex; gap: 20px; }
+.links a { color: rgba(255,255,255,0.85); text-decoration: none; &:hover { color: #fff; } }

@@ -1,0 +1,38 @@
+@use '@/styles/tokens' as *;
+
+.wrap {
+  position: relative;
+  display: inline-flex;
+}
+
+.tip {
+  position: absolute;
+  z-index: 100;
+  padding: 8px 12px;
+  background: $c-text-strong;
+  color: $c-on;
+  border-radius: 8px;
+  font-family: $f-body;
+  font-size: 13px;
+  line-height: 16px;
+  white-space: nowrap;
+  box-shadow: $sh-2;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.15s, transform 0.15s;
+  transform: translateY(2px);
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 8px; height: 8px;
+    background: $c-text-strong;
+    transform: rotate(45deg);
+  }
+}
+.shown { opacity: 1; transform: none; }
+
+.top    { bottom: calc(100% + 8px); left: 50%; transform: translate(-50%, 2px); &.shown { transform: translate(-50%, 0); } &::after { bottom: -4px; left: 50%; margin-left: -4px; } }
+.bottom { top: calc(100% + 8px);    left: 50%; transform: translate(-50%, -2px); &.shown { transform: translate(-50%, 0); } &::after { top: -4px;    left: 50%; margin-left: -4px; } }
+.left   { right: calc(100% + 8px);  top: 50%;  transform: translate(2px, -50%); &.shown { transform: translate(0, -50%); } &::after { right: -4px;  top: 50%; margin-top: -4px; } }
+.right  { left: calc(100% + 8px);   top: 50%;  transform: translate(-2px, -50%); &.shown { transform: translate(0, -50%); } &::after { left: -4px;   top: 50%; margin-top: -4px; } }

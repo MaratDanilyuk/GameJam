@@ -1,0 +1,23 @@
+@use '@/styles/tokens' as *;
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  background: $c-surface-2;
+  color: $c-text-strong;
+  border-radius: 50%;
+  transition: background 0.15s, color 0.15s, transform 0.06s;
+  &:hover  { background: $c-purple-300; color: $c-primary-deep; }
+  &:active { transform: scale(0.94); }
+  &:focus-visible { outline: none; box-shadow: $sh-focus; }
+}
+.size-32 { width: 32px; height: 32px; }
+.size-40 { width: 40px; height: 40px; }
+.size-48 { width: 48px; height: 48px; }
+
+.tone-light  { background: $c-on; box-shadow: $sh-1; }
+.tone-dark   { background: rgba(27, 27, 36, 0.7); color: $c-on; &:hover { background: rgba(27, 27, 36, 0.85); } }
+.tone-soft   { background: $c-purple-300; color: $c-primary-deep; }

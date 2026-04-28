@@ -1,0 +1,30 @@
+@use '@/styles/tokens' as *;
+
+.sticker {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: $f-display;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  text-align: center;
+  padding: 6px 14px;
+  color: $c-on;
+  position: relative;
+  white-space: nowrap;
+  // Pill shape with subtle wobble
+  border-radius: 999px;
+  transform: rotate(var(--rot, -2deg));
+  box-shadow: 0 6px 0 rgba(28, 25, 51, 0.12);
+}
+
+.size-sm { font-size: 14px; padding: 4px 10px; }
+.size-md { font-size: 18px; padding: 6px 14px; }
+.size-lg { font-size: 28px; padding: 10px 22px; }
+
+.tone-primary { background: $c-primary; }
+.tone-brand   { background: $c-danger-press; }
+.tone-warm    { background: $c-warn; color: $c-text-strong; }
+.tone-success { background: $c-success; }
+.tone-info    { background: $c-info; }
+.tone-soft    { background: $c-purple-500; color: $c-primary-deep; }

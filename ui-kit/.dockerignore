@@ -1,0 +1,7 @@
+node_modules
+dist
+storybook-static
+.idea
+.claude
+.DS_Store
+*.log

@@ -1,0 +1,32 @@
+@use '@/styles/tokens' as *;
+
+.block {
+  font-family: $f-body;
+  color: $c-text;
+
+  h1, h2, h3, h4 { font-family: $f-display; color: $c-text-strong; line-height: 1.2; margin: 0 0 12px; }
+  h1 { font-size: 32px; font-weight: 900; }
+  h2 { font-size: 24px; font-weight: 700; }
+  h3 { font-size: 20px; font-weight: 700; }
+  h4 { font-size: 16px; font-weight: 700; }
+
+  p  { font-size: 16px; line-height: 24px; margin: 0 0 12px; }
+  ul, ol { padding-left: 22px; margin: 0 0 12px; }
+  li { margin-bottom: 4px; line-height: 22px; }
+
+  a { color: $c-primary; text-decoration: underline; text-underline-offset: 3px; }
+  a:hover { color: $c-primary-press; }
+
+  blockquote {
+    margin: 0 0 12px;
+    padding: 12px 16px;
+    background: $c-purple-100;
+    border-left: 4px solid $c-primary;
+    border-radius: 0 8px 8px 0;
+    color: $c-text-strong;
+  }
+  code { font-family: ui-monospace, monospace; background: $c-surface-2; padding: 2px 6px; border-radius: 6px; font-size: 0.9em; }
+}
+
+.size-sm p { font-size: 14px; line-height: 20px; }
+.size-lg p { font-size: 18px; line-height: 28px; }

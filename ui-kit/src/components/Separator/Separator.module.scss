@@ -1,0 +1,11 @@
+@use '@/styles/tokens' as *;
+
+.sep {
+  border: none;
+  background: $c-line;
+  margin: 0;
+}
+.h { height: 1px; width: 100%; }
+.v { width: 1px; align-self: stretch; }
+.dashed { background: transparent; border-top: 1px dashed $c-line; }
+.thick  { height: 2px; }

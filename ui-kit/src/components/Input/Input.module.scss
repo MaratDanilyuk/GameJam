@@ -1,0 +1,59 @@
+@use '@/styles/tokens' as *;
+
+.field {
+  display: grid;
+  gap: 6px;
+  font-family: $f-body;
+  width: 100%;
+}
+
+.label { font-size: 14px; font-weight: 600; color: $c-text-strong; }
+
+.wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: $c-on;
+  border: 2px solid $c-line;
+  border-radius: $r-md;
+  transition: border-color 0.15s, box-shadow 0.15s;
+  padding: 0 14px;
+
+  &:hover { border-color: $c-purple-600; }
+  &:focus-within {
+    border-color: $c-primary;
+    box-shadow: $sh-focus;
+  }
+}
+
+.size-md .input { height: 44px; font-size: 16px; }
+.size-lg .input { height: 52px; font-size: 18px; }
+
+.input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 0;
+  color: $c-text-strong;
+  &::placeholder { color: $c-text-muted; }
+}
+
+.icon { color: $c-text-muted; display: flex; }
+.iconLeft  { margin-right: 8px; }
+.iconRight { margin-left: 8px;  }
+
+.help { font-size: 13px; color: $c-text-muted; }
+
+.error .wrap {
+  border-color: $c-danger;
+  &:focus-within { box-shadow: 0 0 0 4px rgba(255, 75, 92, 0.18); }
+}
+.error .help { color: $c-danger; }
+
+.disabled .wrap {
+  background: $c-surface-2;
+  border-color: $c-line;
+  cursor: not-allowed;
+  .input { color: $c-text-muted; }
+}
