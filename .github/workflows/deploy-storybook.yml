@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - 'ui-kit/**'
+      - '.github/workflows/deploy-storybook.yml'
 
   workflow_dispatch:
 
