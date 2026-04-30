@@ -1,0 +1,29 @@
+@use '@/styles/tokens' as *;
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 24px;
+  height: 24px;
+  padding: 0 8px;
+  border-radius: 999px;
+  background: $c-danger-press;
+  color: $c-on;
+  font-family: $f-body;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 1;
+  letter-spacing: 0.01em;
+  &.stroke { box-shadow: 0 0 0 2px $c-on; }
+}
+
+.size-sm { min-width: 18px; height: 18px; font-size: 11px; padding: 0 5px; }
+.size-md { min-width: 24px; height: 24px; font-size: 13px; padding: 0 8px; }
+.size-lg { min-width: 28px; height: 28px; font-size: 14px; padding: 0 10px; }
+
+.color-danger  { background: $c-danger-press; }
+.color-primary { background: $c-primary; }
+.color-success { background: $c-success; }
+.color-warn    { background: $c-warn; color: $c-text-strong; }
+.color-neutral { background: $c-text-muted; }

@@ -1,0 +1,18 @@
+@use '@/styles/tokens' as *;
+
+.wrap { position: relative; display: inline-block; font-family: $f-body; }
+.pop {
+  position: absolute; z-index: 100; top: calc(100% + 10px); left: 0;
+  width: 280px; padding: 14px 16px;
+  background: #fff; color: $c-text;
+  border-radius: $r-md; box-shadow: $sh-2;
+  border: 1px solid $c-line;
+  animation: pp-in 0.15s ease-out;
+}
+@keyframes pp-in { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: none; } }
+
+.title { font-family: $f-display; font-weight: 700; font-size: 16px; color: $c-text-strong; margin: 0 0 4px; }
+.body  { font-size: 14px; line-height: 19px; }
+.foot  { display: flex; justify-content: flex-end; gap: 8px; margin-top: 12px; }
+
+.close { position: absolute; top: 8px; right: 8px; }

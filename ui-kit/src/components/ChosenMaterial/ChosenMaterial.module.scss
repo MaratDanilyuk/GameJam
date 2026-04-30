@@ -1,0 +1,17 @@
+@use '@/styles/tokens' as *;
+
+.card {
+  display: flex; align-items: center; gap: 14px;
+  padding: 14px 18px;
+  background: $c-on; border: 2px solid $c-line; border-radius: $r-md;
+  font-family: $f-body; cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+  &:hover { border-color: $c-purple-600; background: $c-purple-100; }
+  &.selected { border-color: $c-primary; background: $c-purple-200; }
+}
+.icon { width: 44px; height: 44px; flex: none; border-radius: 12px; background: $c-purple-300; color: $c-primary-deep; display: grid; place-items: center; font-family: $f-display; font-weight: 700; font-size: 22px; }
+.body { flex: 1; }
+.title { font-weight: 700; color: $c-text-strong; font-size: 16px; }
+.sub   { color: $c-text-muted; font-size: 13px; }
+.check { color: $c-primary; opacity: 0; transition: opacity 0.15s; }
+.selected .check { opacity: 1; }

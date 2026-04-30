@@ -1,0 +1,33 @@
+@use '@/styles/tokens' as *;
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border: none;
+  cursor: pointer;
+  background: $c-surface-2;
+  color: $c-text-muted;
+  height: 36px;
+  padding: 0 12px;
+  border-radius: 999px;
+  font-family: $f-body;
+  font-weight: 700;
+  font-size: 14px;
+  transition: background 0.15s, color 0.15s, transform 0.08s;
+  &:hover { background: $c-purple-200; color: $c-primary-soft; }
+  &:focus-visible { outline: none; box-shadow: $sh-focus; }
+}
+
+.liked {
+  background: rgba(255, 75, 92, 0.12);
+  color: $c-danger-press;
+  &:hover { background: rgba(255, 75, 92, 0.18); }
+}
+
+.pulse { animation: lb-pulse 0.4s ease-out; }
+@keyframes lb-pulse {
+  0%   { transform: scale(1); }
+  40%  { transform: scale(1.15); }
+  100% { transform: scale(1); }
+}

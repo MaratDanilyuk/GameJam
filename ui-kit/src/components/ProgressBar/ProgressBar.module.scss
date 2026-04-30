@@ -1,0 +1,52 @@
+@use '@/styles/tokens' as *;
+
+.root {
+  display: grid;
+  gap: 6px;
+  font-family: $f-body;
+}
+
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 13px;
+  color: $c-text-muted;
+}
+.label { color: $c-text-strong; font-weight: 600; }
+
+.track {
+  position: relative;
+  height: 12px;
+  border-radius: 999px;
+  background: $c-purple-300;
+  overflow: hidden;
+}
+
+.fill {
+  position: absolute;
+  inset: 0;
+  width: var(--p, 0%);
+  border-radius: 999px;
+  background: linear-gradient(90deg, $c-primary, $c-primary-soft);
+  transition: width 0.4s ease;
+}
+
+.tone-success .fill { background: linear-gradient(90deg, rgb(43, 208, 123), rgb(89, 224, 152)); }
+.tone-warn .fill    { background: linear-gradient(90deg, rgb(255, 176, 32), rgb(255, 200, 90)); }
+.tone-danger .fill  { background: linear-gradient(90deg, rgb(255, 75, 92), rgb(255, 122, 134)); }
+
+.size-sm .track { height: 8px; }
+.size-lg .track { height: 16px; }
+
+.shimmer .fill::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.45), transparent);
+  animation: pb-shimmer 1.6s linear infinite;
+}
+@keyframes pb-shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}

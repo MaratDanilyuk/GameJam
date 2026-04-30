@@ -1,0 +1,60 @@
+@use '@/styles/tokens' as *;
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 14, 35, 0.5);
+  backdrop-filter: blur(2px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 24px;
+  animation: m-fade 0.2s ease-out;
+}
+@keyframes m-fade { from { opacity: 0; } to { opacity: 1; } }
+
+.modal {
+  background: $c-on;
+  border-radius: $r-xl;
+  box-shadow: $sh-3;
+  max-width: 100%;
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  animation: m-pop 0.25s cubic-bezier(.2,.8,.2,1);
+  font-family: $f-body;
+}
+@keyframes m-pop {
+  from { opacity: 0; transform: translateY(12px) scale(0.96); }
+  to   { opacity: 1; transform: none; }
+}
+
+.size-sm { width: 360px; }
+.size-md { width: 480px; }
+.size-lg { width: 640px; }
+
+.head {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 24px 8px;
+}
+.title {
+  flex: 1;
+  font-family: $f-display;
+  font-size: 24px;
+  font-weight: 700;
+  color: $c-text-strong;
+  line-height: 30px;
+  margin: 0;
+}
+.body { padding: 8px 24px 24px; color: $c-text; line-height: 22px; overflow: auto; }
+.footer {
+  display: flex;
+  gap: 12px;
+  padding: 16px 24px 24px;
+  justify-content: flex-end;
+  border-top: 1px solid $c-line;
+}

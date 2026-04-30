@@ -1,0 +1,67 @@
+// Design tokens — extracted from Figma kit (Uchi.ru 1-4)
+// Use via: @use '@/styles/tokens' as *;
+
+// ---- Colors ----
+$c-text:        rgb(47, 47, 69);
+$c-text-strong: rgb(27, 27, 36);
+$c-text-deep:   rgb(9, 21, 38);
+$c-text-muted:  rgb(124, 124, 138);
+$c-on:          rgb(255, 255, 255);
+
+$c-primary:        rgb(81, 55, 199);
+$c-primary-hover:  rgb(99, 74, 214);
+$c-primary-press:  rgb(88, 66, 226);
+$c-primary-deep:   rgb(63, 42, 153);
+$c-primary-soft:   rgb(118, 95, 222);
+
+$c-purple-100: rgb(244, 244, 252);
+$c-purple-150: rgb(242, 240, 253);
+$c-purple-200: rgb(241, 239, 252);
+$c-purple-300: rgb(234, 230, 255);
+$c-purple-400: rgb(229, 232, 255);
+$c-purple-500: rgb(221, 215, 255);
+$c-purple-600: rgb(206, 198, 255);
+$c-purple-700: rgb(159, 143, 232);
+
+$c-bg:        rgb(245, 246, 247);
+$c-surface:   rgb(255, 255, 255);
+$c-surface-2: rgb(244, 244, 252);
+$c-line:      rgb(231, 229, 241);
+
+$c-danger:        rgb(255, 75, 92);
+$c-danger-soft:   rgb(255, 97, 112);
+$c-danger-press:  rgb(255, 58, 78);
+$c-danger-deep:   rgb(234, 49, 23);
+
+$c-success: rgb(43, 208, 123);
+$c-info:    rgb(0, 26, 255);
+$c-warn:    rgb(255, 176, 32);
+
+// ---- Type ----
+$f-display: 'Lapsus Pro', 'Factor A', -apple-system, sans-serif;
+$f-body:    'Factor A', -apple-system, 'Helvetica Neue', sans-serif;
+$f-alt:     'Source Sans Pro', $f-body;
+
+// ---- Radius ----
+$r-sm: 8px;
+$r-md: 12px;
+$r-lg: 16px;
+$r-xl: 24px;
+$r-2xl: 32px;
+
+// ---- Shadow ----
+$sh-1: 0 1px 2px rgba(28, 25, 51, 0.05), 0 2px 8px rgba(57, 78, 127, 0.06);
+$sh-2: 0 4px 16px rgba(57, 78, 127, 0.1), 0 1px 4px rgba(28, 25, 51, 0.06);
+$sh-3: 0 12px 32px rgba(57, 78, 127, 0.16), 0 2px 8px rgba(28, 25, 51, 0.08);
+$sh-focus: 0 0 0 4px rgba(81, 55, 199, 0.18);
+
+// ---- Spacing ----
+$sp-1: 4px;
+$sp-2: 8px;
+$sp-3: 12px;
+$sp-4: 16px;
+$sp-5: 20px;
+$sp-6: 24px;
+$sp-8: 32px;
+$sp-10: 40px;
+$sp-12: 48px;

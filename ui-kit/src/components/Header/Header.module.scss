@@ -1,0 +1,18 @@
+@use '@/styles/tokens' as *;
+
+.header {
+  display: flex; align-items: center; gap: 16px;
+  padding: 12px 24px; height: 64px;
+  background: #fff; border-bottom: 1px solid $c-line;
+  font-family: $f-body;
+}
+.brand { display: flex; align-items: center; gap: 10px; font-family: $f-display; font-weight: 900; font-size: 20px; color: $c-text-strong; }
+.brand .mark { width: 32px; height: 32px; border-radius: 10px; background: linear-gradient(135deg, $c-primary, $c-primary-soft); display: grid; place-items: center; color: #fff; }
+.nav { display: flex; gap: 6px; flex: 1; margin-left: 24px; }
+.nav button {
+  border: none; background: transparent; padding: 8px 14px; border-radius: 10px; cursor: pointer;
+  font: inherit; font-weight: 600; color: $c-text-muted;
+  &:hover { background: $c-purple-100; color: $c-text-strong; }
+  &.active { background: $c-purple-300; color: $c-primary-deep; }
+}
+.right { display: flex; align-items: center; gap: 12px; }

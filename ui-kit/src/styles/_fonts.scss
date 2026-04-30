@@ -1,0 +1,43 @@
+@font-face {
+  font-family: 'Factor A';
+  src: url('./fonts/type.today-factor-a-web/Factor A-Regular-Web.woff2') format('woff2'),
+       url('./fonts/type.today-factor-a-web/Factor A-Regular-Web.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Factor A';
+  src: url('./fonts/type.today-factor-a-web/Factor A-Italic-Web.woff2') format('woff2'),
+       url('./fonts/type.today-factor-a-web/Factor A-Italic-Web.woff') format('woff');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Factor A';
+  src: url('./fonts/type.today-factor-a-web/Factor A-Bold-Web.woff2') format('woff2'),
+       url('./fonts/type.today-factor-a-web/Factor A-Bold-Web.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Factor A';
+  src: url('./fonts/type.today-factor-a-web/Factor A-Extrabold-Web.woff2') format('woff2'),
+       url('./fonts/type.today-factor-a-web/Factor A-Extrabold-Web.woff') format('woff');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lapsus Pro';
+  src: url('./fonts/LapsusPro/LapsusPro-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}

@@ -1,0 +1,7 @@
+{
+  "font": {
+    "display": { "value": "'Lapsus Pro', 'Factor A', -apple-system, sans-serif" },
+    "body": { "value": "'Factor A', -apple-system, 'Helvetica Neue', sans-serif" },
+    "alt": { "value": "'Source Sans Pro', 'Factor A', -apple-system, 'Helvetica Neue', sans-serif" }
+  }
+}

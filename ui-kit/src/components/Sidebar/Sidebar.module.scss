@@ -1,0 +1,19 @@
+@use '@/styles/tokens' as *;
+
+.bar {
+  width: 240px; min-height: 100%;
+  background: #fff; border-right: 1px solid $c-line;
+  padding: 20px 12px; font-family: $f-body;
+  display: flex; flex-direction: column; gap: 4px;
+}
+.section { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: $c-text-muted; padding: 12px 12px 4px; }
+.item {
+  display: flex; align-items: center; gap: 10px;
+  padding: 10px 12px; border-radius: 10px;
+  border: none; background: transparent; cursor: pointer; text-align: left;
+  font: inherit; font-weight: 600; font-size: 14px; color: $c-text;
+  &:hover { background: $c-purple-100; }
+  &.active { background: $c-purple-300; color: $c-primary-deep; }
+}
+.icon { display: flex; }
+.count { margin-left: auto; }

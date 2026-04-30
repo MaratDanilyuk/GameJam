@@ -1,0 +1,18 @@
+@use '@/styles/tokens' as *;
+
+.head {
+  display: flex; align-items: center; gap: 16px;
+  padding: 24px 0;
+  font-family: $f-body;
+}
+.back {
+  width: 40px; height: 40px; border-radius: 50%; border: none;
+  background: $c-surface-2; color: $c-text-strong; cursor: pointer;
+  display: inline-flex; align-items: center; justify-content: center; flex: none;
+  &:hover { background: $c-purple-300; }
+}
+.body { flex: 1; }
+.crumbs { display: flex; gap: 6px; font-size: 13px; color: $c-text-muted; margin-bottom: 4px; }
+.crumbs span + span::before { content: '/'; margin-right: 6px; opacity: 0.6; }
+.title { font-family: $f-display; font-size: 32px; font-weight: 700; color: $c-text-strong; line-height: 1.15; margin: 0; }
+.actions { display: flex; gap: 8px; }

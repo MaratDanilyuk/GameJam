@@ -1,0 +1,118 @@
+@use '@/styles/tokens' as *;
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 14, 35, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 24px;
+  animation: cm-fade 0.2s ease-out;
+}
+@keyframes cm-fade { from { opacity: 0; } to { opacity: 1; } }
+
+.card {
+  position: relative;
+  width: 420px;
+  max-width: 100%;
+  background: $c-on;
+  border-radius: $r-2xl;
+  padding: 56px 32px 32px;
+  font-family: $f-body;
+  text-align: center;
+  box-shadow: $sh-3;
+  overflow: visible;
+  animation: cm-pop 0.4s cubic-bezier(.2,.9,.2,1);
+}
+@keyframes cm-pop {
+  from { opacity: 0; transform: translateY(20px) scale(0.92); }
+  to   { opacity: 1; transform: none; }
+}
+
+.confetti {
+  position: absolute;
+  inset: 0;
+  border-radius: $r-2xl;
+  overflow: hidden;
+  pointer-events: none;
+
+  &::before, &::after {
+    content: '';
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background-image:
+      radial-gradient(circle at 20% 30%, $c-warn 6px, transparent 7px),
+      radial-gradient(circle at 70% 20%, $c-danger 5px, transparent 6px),
+      radial-gradient(circle at 40% 70%, $c-success 6px, transparent 7px),
+      radial-gradient(circle at 85% 60%, $c-primary 5px, transparent 6px),
+      radial-gradient(circle at 10% 80%, $c-info 4px, transparent 5px);
+    background-size: 200px 200px;
+    animation: cm-fall 6s linear infinite;
+    opacity: 0.9;
+  }
+  &::after { animation-delay: -3s; opacity: 0.55; }
+}
+@keyframes cm-fall {
+  from { transform: translate(-25%, -50%); }
+  to   { transform: translate(-25%, 0%); }
+}
+
+.medal {
+  position: relative;
+  z-index: 1;
+  width: 120px;
+  height: 120px;
+  margin: -12px auto 8px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, $c-warn, rgb(220, 130, 0));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $c-on;
+  font-family: $f-display;
+  font-weight: 700;
+  font-size: 56px;
+  box-shadow: 0 12px 32px rgba(220, 130, 0, 0.4), inset 0 -8px 0 rgba(0,0,0,0.15);
+}
+.medal::before {
+  content: '';
+  position: absolute;
+  width: 8px; height: 36px;
+  background: $c-danger;
+  top: -28px; left: 22px;
+  transform: rotate(-18deg);
+  border-radius: 4px;
+}
+.medal::after {
+  content: '';
+  position: absolute;
+  width: 8px; height: 36px;
+  background: $c-primary;
+  top: -28px; right: 22px;
+  transform: rotate(18deg);
+  border-radius: 4px;
+}
+
+.title {
+  position: relative;
+  z-index: 1;
+  font-family: $f-display;
+  font-size: 32px;
+  line-height: 36px;
+  font-weight: 700;
+  color: $c-text-strong;
+  margin: 16px 0 8px;
+}
+.subtitle {
+  position: relative;
+  z-index: 1;
+  font-size: 16px;
+  line-height: 22px;
+  color: $c-text-muted;
+  margin: 0 0 24px;
+}
+.footer { position: relative; z-index: 1; display: flex; gap: 12px; justify-content: center; }
+.close { position: absolute; top: 16px; right: 16px; z-index: 2; }

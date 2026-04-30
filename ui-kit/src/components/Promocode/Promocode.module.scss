@@ -1,0 +1,15 @@
+@use '@/styles/tokens' as *;
+
+.box {
+  display: flex; align-items: center; gap: 12px;
+  padding: 12px 16px;
+  background: $c-on; border: 2px dashed $c-purple-600;
+  border-radius: $r-md; font-family: $f-body;
+}
+.code { font-family: ui-monospace, 'SF Mono', monospace; font-weight: 700; color: $c-primary-deep; font-size: 18px; letter-spacing: 0.05em; flex: 1; }
+.btn {
+  border: none; background: $c-purple-300; color: $c-primary-deep;
+  border-radius: 8px; padding: 8px 12px; font-weight: 700; cursor: pointer;
+  &:hover { background: $c-purple-500; }
+}
+.copied { background: $c-success; color: #fff; &:hover { background: $c-success; } }
