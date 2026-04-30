@@ -5,5 +5,9 @@ const config: StorybookConfig = {
   addons: ['@storybook/addon-essentials', '@storybook/addon-interactions'],
   framework: { name: '@storybook/react-vite', options: {} },
   docs: { autodocs: 'tag' },
+  viteFinal: async (config) => {
+    config.base = '/GameJam/';
+    return config;
+  },
 };
 export default config;
