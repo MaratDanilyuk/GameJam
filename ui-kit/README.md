@@ -7,39 +7,36 @@
 ### Требования
 
 - [Node.js](https://nodejs.org/) >= 22
-- [Yarn](https://yarnpkg.com/) (включён через corepack)
 
 ### Установка
 
 ```bash
-corepack enable          # активирует yarn, встроенный в Node.js
-git clone <repo-url>
 cd ui-kit
-yarn install             # установка зависимостей
+npm install
 ```
 
 ### Запуск Storybook
 
 ```bash
-yarn tokens              # генерация SCSS-переменных из дизайн-токенов
-yarn storybook           # Storybook на http://localhost:6006
+npm run tokens           # генерация SCSS-переменных из дизайн-токенов
+npm run storybook        # Storybook на http://localhost:6006
 ```
 
 ### Запуск dev-сервера Vite
 
 ```bash
-yarn dev                 # генерирует токены и запускает Vite на http://localhost:5173
+npm run dev              # генерирует токены и запускает Vite на http://localhost:5173
 ```
 
 ## Все команды
 
 | Команда | Описание |
 |---|---|
-| `yarn tokens` | Генерация SCSS из JSON-токенов (Style Dictionary) |
-| `yarn storybook` | Storybook dev-сервер на :6006 |
-| `yarn dev` | Vite dev-сервер (генерирует токены автоматически) |
-| `yarn build` | Прод-сборка библиотеки |
-| `yarn build-storybook` | Статичный билд Storybook |
+| `npm run tokens` | Генерация SCSS из JSON-токенов (Style Dictionary) |
+| `npm run storybook` | Storybook dev-сервер на :6006 |
+| `npm run dev` | Vite dev-сервер (генерирует токены автоматически) |
+| `npm run build` | Прод-сборка библиотеки |
+| `npm run build-storybook` | Статичный билд Storybook |
 
 ## Запуск в Docker
 
@@ -112,7 +109,7 @@ Dockerfile
 - `src/styles/scss/shadow-variables.scss` — тени
 - `src/components/{Name}/{Name}-vars.scss` — переменные для каждого компонента
 
-Для обновления токенов: замените JSON-файлы (экспорт из Figma через Tokens Studio) и запустите `yarn tokens`.
+Для обновления токенов: замените JSON-файлы (экспорт из Figma через Tokens Studio) и запустите `npm run tokens`.
 
 ## Компоненты
 
